@@ -1,4 +1,4 @@
-# I Dig Doge
+# Rubycoin Webminer
 
 ## Getting Started
 
@@ -86,7 +86,7 @@ This is a manual process right now, for a lot of reasons. You're welcome to auto
 
 - Minor changes for HTTPS.
 - Uses another scrypt implementation on the server for easier install.
-- Checks Dogecoin addresses properly, by decoding and validating the checksum.
+- Checks Rubycoin addresses properly, by decoding and validating the checksum.
 
 ### Version 2.0.0
 
