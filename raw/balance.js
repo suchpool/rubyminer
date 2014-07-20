@@ -4,7 +4,7 @@ function updateBalance() {
 	ajax({
 		url: '/api/balance'
 		, success: function(amount) {
-			balanceBlock.innerHTML = '<strong>' + significant4(amount, true) + '</strong>Dogecoins';
+			balanceBlock.innerHTML = '<strong>' + significant4(amount, true) + '</strong>Rubycoins';
 		}
 	});
 };
