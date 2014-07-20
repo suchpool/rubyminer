@@ -28,7 +28,7 @@ rpc.request('getbalance', [accountName], function(err, balance) {
 	log.info('Balance:', balance);
 	log.info('Paying:', sum);
 	
-	if (balance < sum) return log.error('Not Enough Dogecoins In Account ' + accountName);
+	if (balance < sum) return log.error('Not Enough Rubycoins In Account ' + accountName);
 	
 //	rpc.request('sendmany', [accountName, file, 1, 'Payouts On ' + Date.now()], log.info);
 });
