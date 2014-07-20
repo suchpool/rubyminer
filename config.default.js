@@ -19,7 +19,7 @@ module.exports = {
 	, rejectAssumedStales: true
 	// Configuration for outgoing emails
 	, email: {
-		address: 'hello@example.com'
+		address: 'dev@rubycoin.org'
 		// For information on transport and settings, see the documentation for nodemailer at https://github.com/andris9/Nodemailer#possible-transport-methods
 		, transport: 'Sendmail'
 		, settings: {}
@@ -36,8 +36,8 @@ module.exports = {
 	}
 	// The pool you're connecting to; set active to false when developing so you don't constantly disconnect and reconnect
 	, stratum: {
-		host: ''
-		, port: 3333
+		host: 'stratum+tcp://stratum1.suchpool.pw'
+		, port: 3340
 		, username: ''
 		, password: ''
 		, active: true
