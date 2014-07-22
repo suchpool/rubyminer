@@ -1,10 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,300")
 
 // Variables
-// $color-color: #c6491a
-$color-color: #bfa76f
+$color-color: #c6491a
 $color-grey: #333333
+$color-blue: #4baad3
 $color-white: #fafafa
+$color-withdraw: #c21300
 
 // Helpers
 =respond-to($name)
@@ -257,22 +258,29 @@ form
 	+placeholderColor("input", $color-white)
 
 // Text Colors
+.blue
+	color: $color-blue
 .grey
 	color: $color-grey
 .color
 	color: $color-color
 .white
 	color: $color-white
+.withdraw 
+	color: $color-withdraw
 
 // Page Colors
-.page.grey
+.page.intro
 	background-color: $color-grey
 	color: $color-white
-.page.white
+.page.cryptowat
+	background-color: $color-blue
+	color: $color-white
+.page.howitworks
 	background-color: $color-white
 	color: $color-grey
-.page.color
-	background-color: $color-color
+.page.withdraw
+	background-color: $color-grey
 	color: $color-white
 
 // Pages
@@ -337,7 +345,7 @@ form
 	.columns-3
 		h3
 			margin-bottom: 6px
-
+			
 #yougotcoins
 	.info
 		line-height: 1.2
