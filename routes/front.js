@@ -48,7 +48,7 @@ function withdrawp(req, res) {
 		|| address.length !== 34
 		|| !addresses(address)) return res.render('withdraw', {
 			withdraw: id
-			, message: 'That address doesn\'t look like a Dogecoin address. Please make sure you copied the whole thing. If you\'re sure it\'s right, please feel free to contact us using the link at the bottom of the page.'
+			, message: 'That address doesn\'t look like a Rubycoin address. Please make sure you copied the whole thing. If you\'re sure it\'s right, please feel free to contact us using the link at the bottom of the page.'
 		});
 	
 	// Check if it's in the database
@@ -84,7 +84,7 @@ function withdrawp(req, res) {
 					
 					// All good
 					res.render('withdraw', {
-						message: 'It all checks out! Your withdrawal has been added to the queue, and should be processed within 24 hours. Thanks again for using I Dig Doge!'
+						message: 'Your withdrawal has been added to the queue, and should be processed within 24 hours.'
 					});
 				});
 			});

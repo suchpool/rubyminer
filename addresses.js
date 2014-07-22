@@ -50,7 +50,7 @@ function validAddress(string) {
 		decoded = '0' + decoded;
 	}
 	
-	// Make sure it's a Dogecoin address
+	// Make sure it's a Rubycoin address
 	if (decoded.substr(0, 2) != '1e') return false;
 	
 	// Split into key and signature

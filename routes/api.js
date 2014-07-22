@@ -360,7 +360,7 @@ function withdraw(req, res) {
 			
 			redis.get('balance::email::' + email, function(err, amount) {
 				if (err) return res.send(500);
-				if (amount < config.payouts.minWithdraw) return res.send(400, 'You must have at least ' + config.payouts.minWithdraw + ' Dogecoin' + (config.payouts.minWithdraw != 1 ? 's' : '') +' in your account before you can make a withdrawal!');
+				if (amount < config.payouts.minWithdraw) return res.send(400, 'You must have at least ' + config.payouts.minWithdraw + ' Rubycoin' + (config.payouts.minWithdraw != 1 ? 's' : '') +' in your account before you can make a withdrawal!');
 				
 				var withdrawNumber = crypto.randomBytes(48).toString('hex');
 				redis.set('withdraw::' + withdrawNumber, email, 'PX', config.withdrawTimeout, function(err) {
@@ -376,8 +376,8 @@ function withdraw(req, res) {
 					
 					transport.sendMail({
 						to: email
-						, from: ('I Dig Doge <' + config.email.address + '>')
-						, subject: 'Withdraw Your Dogecoins!'
+						, from: ('Rubycoin Webminer <' + config.email.address + '>')
+						, subject: 'Withdraw Your Rubycoins!'
 						, text: emailContent
 					}
 					, function(err, response) {
